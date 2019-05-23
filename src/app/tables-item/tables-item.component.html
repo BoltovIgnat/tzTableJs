@@ -1,0 +1,8 @@
+<td class="currencies__td" *ngIf="!isEdit">{{ item.date }}</td>
+<td class="currencies__td" *ngIf="isEdit"><input class="currencies__field" type="text" placeholder="" [(ngModel)]="item.date"></td>
+<td class="currencies__td" *ngIf="!isEdit">{{ item.price }}</td>
+<td class="currencies__td" *ngIf="isEdit"><input class="currencies__field" type="number" [(ngModel)]="item.price"></td>
+<td class="currencies__td">
+    <button class="button currencies__button" data-target="edit" (click)="onEdit(item)">Edit</button>
+    <button class="button currencies__button" data-target="delete" (click)="onDelete()">Delete</button>
+</td>

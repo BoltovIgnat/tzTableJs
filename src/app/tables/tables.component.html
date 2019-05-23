@@ -1,0 +1,13 @@
+<table class="currencies">
+ <thead *ngIf="currenciesItems.length">
+    <tr class="currencies__tr">
+        <th class="currencies__th currencies__th--sort" (click)="sort($event)" data-sort="date">DateTime</th>
+        <th class="currencies__th currencies__th--sort" (click)="sort($event)" data-sort="price">Price</th>
+        <th class="currencies__th">Actions</th>
+    </tr>
+ </thead>
+ <tbody class="currencies__body" *ngIf="currenciesItems.length">
+     <tr class="currencies__item" *ngFor="let item of currenciesItems; let i = index" [item]="item" (delete)="delete(item)" (edit)="edit(item)"></tr>
+ </tbody>
+ <p class="currencies__text" *ngIf="!currenciesItems.length">Записей нет</p>
+</table>

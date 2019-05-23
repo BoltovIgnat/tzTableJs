@@ -1,0 +1,12 @@
+<div *ngIf="pages.maxPage > 0">
+    <div class="counter" >{{pages.page}}/{{pages.maxPage}}</div>
+
+    <button class="paginate paginate--left" (click)="onPrevPage()">
+        <i class="paginate__item"></i>
+        <i class="paginate__item"></i>
+    </button>
+    <button class="paginate paginate--right" (click)="onNextPage()">
+        <i class="paginate__item"></i>
+        <i class="paginate__item"></i>
+    </button>
+</div>
